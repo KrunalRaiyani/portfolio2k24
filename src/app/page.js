@@ -1,6 +1,8 @@
-import AboutMe from "@/components/AboutMe";
-import HeroSection from "@/components/HeroSection";
-import Services from "@/components/Services";
+import AboutMe from "@/components/sections/AboutMe";
+import HeroSection from "@/components/sections/HeroSection";
+import Project from "@/components/sections/Project";
+import Services from "@/components/sections/Services";
+import Skill from "@/components/sections/Skill";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Services />
+      <Project />
+      <Skill />
     </div>
   );
 }

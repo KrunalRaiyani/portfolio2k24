@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "../ServiceCard";
 
 const Services = () => {
   let serviceData = [
@@ -30,11 +30,11 @@ const Services = () => {
   ];
 
   return (
-    <div className="main bg-[#17173A] text-white h-screen px-5 py-10 mx-auto">
+    <div className="main bg-[#17173A] text-white px-5 py-16 mx-auto">
       <h2 className="text-[40px] font-bold mb-1 text-center">
         Our <span className="text-[#01EEFF]">Services</span>
       </h2>
-      <div className="flex gap-8">
+      <div className="flex gap-8 pt-16">
         {serviceData?.map((item, index) => {
           return (
             <ServiceCard

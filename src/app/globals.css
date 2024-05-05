@@ -57,3 +57,17 @@
 .bg-circle {
   filter: drop-shadow(0px 0px 15px #4b44de);
 }
+
+.project-card-info {
+  text-shadow: 0px 0px 2px black;
+  background: linear-gradient(
+    0deg,
+    rgba(16, 223, 214, 0.653),
+    rgba(187, 70, 255, 0.653)
+  ) !important;
+  /* background: linear-gradient(
+    180deg,
+    rgba(1, 238, 255, 0.45) 0%,
+    rgba(72, 72, 72, 0.45) 100%
+  ) !important; */
+}
