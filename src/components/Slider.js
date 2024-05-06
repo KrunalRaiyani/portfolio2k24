@@ -1,87 +1,61 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { images } from "./image-data";
+"use client";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const variants = {
-  enter: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-};
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
 
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset, velocity) => {
-  return Math.abs(offset) * velocity;
-};
-
-const autoChangeTime = 3000; // 3 seconds
+// import required modules
+import { Navigation } from "swiper/modules";
 
 const Slider = () => {
-  const [[page, direction], setPage] = useState([0, 0]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      paginate(1);
-    }, autoChangeTime);
-
-    return () => clearInterval(interval);
-  }, [page]);
-
-  const imageIndex = (index) => {
-    const wrappedIndex = index % images.length;
-    return wrappedIndex >= 0 ? wrappedIndex : images.length + wrappedIndex;
-  };
-
-  const paginate = (newDirection) => {
-    setPage([page + newDirection, newDirection]);
-  };
-
   return (
-    <>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          key={page}
-          src={images[imageIndex(page)]}
-          custom={direction}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={
-            {
-              // x: { type: "spring", stiffness: 300, damping: 30 },
-              // opacity: { duration: 0.2 },
-            }
-          }
-          drag="x"
-          //   dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-        />
-      </AnimatePresence>
-    </>
+    <div>
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        {/* <div className="flex items-center justify-between flex-1 gap-20">
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-1">
+              <p className="text-[28px] font-semibold">Hello It’s Me</p>
+              <h1 className="text-[52px] font-bold">Jenish Lodaliya</h1>
+              <div>
+                <p className="text-[28px] font-semibold">
+                  And I’ m a Ui/Ux designer
+                </p>
+              </div>
+              <p className="mt-3">
+                Word preserves the original formatting when you paste content
+                into a document using Ctrl+V.
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <button className="border-2 border-transparent p-2 hover:border-[#01EEFF] transition ease-in-out duration-[0.5s] rounded-full">
+                <img src="/images/x.svg" alt="twitter" />
+              </button>
+              <button className="border-2 border-transparent p-2 hover:border-[#01EEFF] transition ease-in-out duration-[0.5s] rounded-full">
+                <img src="/images/fb.svg" alt="facebook" />
+              </button>
+              <button className="border-2 border-transparent p-2 hover:border-[#01EEFF] transition ease-in-out duration-[0.5s] rounded-full">
+                <img src="/images/instagram.svg" alt="instagram" />
+              </button>
+            </div>
+            <button className="bg-[#01EEFF] w-fit rounded-md p-2 px-6 hover:shadow-[0px_0px_10px_0px_#01EEFF] transition ease-in-out duration-[0.2s]">
+              Downloads CV
+            </button>
+          </div>
+        </div> */}
+        <SwiperSlide>
+          <img src="/images/bg1.png" className="w-full h-full" alt="image" />{" "}
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/images/bg2.png" className="w-full h-full" alt="image" />{" "}
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/images/bg3.png" className="w-full h-full" alt="image" />{" "}
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 };
 

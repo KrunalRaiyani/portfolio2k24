@@ -1,4 +1,5 @@
 import AboutMe from "@/components/sections/AboutMe";
+import Contact from "@/components/sections/Contact";
 import HeroSection from "@/components/sections/HeroSection";
 import Project from "@/components/sections/Project";
 import Services from "@/components/sections/Services";
@@ -7,12 +8,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-[url('/images/heroBg.png')] bg-no-repeat bg-cover h-screen">
+    <div className="">
       <HeroSection />
       <AboutMe />
       <Services />
       <Project />
       <Skill />
+      <Contact />
     </div>
   );
 }

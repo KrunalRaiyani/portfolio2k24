@@ -32,7 +32,7 @@ const TabSection = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 gap-8 mt-10">
+      <div className="grid grid-cols-3 grid-rows-2 gap-8 mt-12 mx-20">
         {tabData?.[activeTab]?.project?.map((project) => (
           <ProjectCard
             key={project.id}
