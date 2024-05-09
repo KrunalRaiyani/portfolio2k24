@@ -2,7 +2,7 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="text-white flex items-center justify-between gap-4 pt-14">
+    <div className="absolute top-0 z-20 w-full px-24 text-white flex items-center justify-between gap-4 pt-14">
       <div className="text-xl font-bold cursor-pointer">Portfolio</div>
       <div className="flex items-center gap-12 text-xl">
         <div className="cursor-pointer nav-link relative">Home</div>

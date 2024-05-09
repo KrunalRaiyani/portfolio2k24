@@ -3,7 +3,7 @@ import React from "react";
 const AboutMe = () => {
   return (
     <div className="bg-[#272766]">
-      <div className="main mt-9 bg-[#272766] text-white px-5 py-10 mx-auto flex items-center">
+      <div className="main bg-[#272766] text-white px-5 py-10 mx-auto flex items-center">
         <div className="relative flex items-center justify-center lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
           <img alt="feature" className="z-10 w-[75%]" src="/images/about.png" />
           <img
