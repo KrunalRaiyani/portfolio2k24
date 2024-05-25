@@ -17,11 +17,11 @@ const Slider = () => {
         // navigation={true}
         loop={true}
         autoplay={{
-          delay: 30000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Navigation]}
-        className="hero-swiper">
+        className="hero-swiper bg-[#272766]">
         <SwiperSlide>
           <img
             src="/images/bg1.png"

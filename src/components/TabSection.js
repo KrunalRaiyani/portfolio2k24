@@ -11,7 +11,7 @@ const TabSection = () => {
 
   return (
     <div>
-      <div className="flex space-x-1 bg-white rounded-full p-1.5 max-w-[55%] my-10 mx-auto">
+      <div className="hidden md:flex space-x-1 bg-white rounded-full p-1.5 lg:max-w-[62%] xl:max-w-[55%] my-10 mx-auto">
         {tabData?.map((tab) => (
           <button
             key={tab.id}
@@ -32,7 +32,16 @@ const TabSection = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 gap-8 mt-12 mx-20">
+      <div className="md:hidden text-black mt-10 w-full">
+        <select className="w-full p-2 px-4 rounded-lg">
+          {tabData?.map((tab) => (
+            <option value={tab?.id} key={tab?.id}>
+              {tab?.label}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6 mt-12 xl:mx-20">
         {tabData?.[activeTab]?.project?.map((project) => (
           <ProjectCard
             key={project.id}

@@ -9,17 +9,17 @@ const ProjectCard = ({ image, name, detail }) => {
           alt={name}
           className="w-full object-cover rounded-t-md"
         />
-        <div className="project-card-info flex flex-col items-center justify-center gap-4 p-12 text-center absolute inset-0 transition-all duration-300 transform translate-y-full group-hover:translate-y-0">
+        <div className="project-card-info flex flex-col items-center justify-center gap-4 p-6 text-center absolute inset-0 transition-all duration-300 transform translate-y-full group-hover:translate-y-0">
           <h3 className="text-xl font-semibold text-center z-10">{name}</h3>
-          <p>{detail}</p>
-          <button className="bg-white text-black p-3 rounded-full">
+          <p className="text-sm sm:text-base">{detail}</p>
+          <button className="bg-white text-black p-2 sm:p-3 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6">
+              className="w-4 h-4 sm:w-6 sm:h-6">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
