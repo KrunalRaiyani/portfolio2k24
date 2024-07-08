@@ -123,10 +123,11 @@ export default function ServiceSlider() {
           },
         }}
         modules={[FreeMode, Pagination]}
-        className="service-slider mt-12 !lg:pt-16 !pb-20">
+        className="service-slider mt-12 !lg:pt-16 !pb-20"
+      >
         {serviceData?.map((item, index) => {
           return (
-            <SwiperSlide className="xl:min-w-[320px]">
+            <SwiperSlide className="xl:min-w-[320px]" key={index}>
               <ServiceCard
                 key={index}
                 img={item?.img}
