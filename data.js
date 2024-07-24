@@ -9,7 +9,7 @@ export const allProjects = [
   {
     id: 2,
     name: "Project 2",
-    image: "/projects/image1.png",
+    image: "/projects/image2.png",
     detail:
       "Word preserves the original formatting when you paste content into a document using Ctrl+V.",
   },
