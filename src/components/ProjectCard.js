@@ -3,11 +3,11 @@ import React from "react";
 const ProjectCard = ({ image, name, detail }) => {
   return (
     <div className="group bg-white rounded-xl border border-gray-300 shadow-md cursor-pointer overflow-hidden">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden h-full">
         <img
           src={image}
           alt={name}
-          className="w-full object-cover rounded-t-md"
+          className="w-full h-full object-contain rounded-t-md"
         />
         <div className="project-card-info flex flex-col items-center justify-center gap-4 p-6 text-center absolute inset-0 transition-all duration-300 transform translate-y-full group-hover:translate-y-0">
           <h3 className="text-xl font-semibold text-center z-10">{name}</h3>
@@ -19,7 +19,8 @@ const ProjectCard = ({ image, name, detail }) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-4 h-4 sm:w-6 sm:h-6">
+              className="w-4 h-4 sm:w-6 sm:h-6"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
