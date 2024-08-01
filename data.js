@@ -9,7 +9,7 @@ export const allProjects = [
   {
     id: 2,
     name: "Project 2",
-    image: "/projects/image1.png",
+    image: "/projects/image2.png",
     detail:
       "Word preserves the original formatting when you paste content into a document using Ctrl+V.",
   },
@@ -42,10 +42,19 @@ export const allProjects = [
       "Word preserves the original formatting when you paste content into a document using Ctrl+V.",
   },
 ];
+export const banner = [
+  {
+    id: 1,
+    name: "Project 1",
+    image: "/projects/image4.png",
+    detail:
+      "Word preserves the original formatting when you paste content into a document using Ctrl+V.",
+  },
+];
 
 export const tabData = [
   { id: 0, label: "All", project: allProjects },
   { id: 1, label: "Application", project: allProjects },
   { id: 2, label: "Website", project: allProjects },
-  { id: 3, label: "poster & Banner", project: allProjects },
+  { id: 3, label: "poster & Banner", project: banner },
 ];
