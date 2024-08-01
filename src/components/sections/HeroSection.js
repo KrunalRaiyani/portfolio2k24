@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import NavBar from "../NavBar";
 import Slider from "../Slider";
@@ -8,7 +9,7 @@ const HeroSection = () => {
     <div className="relative text-white mx-auto flex flex-col gap-8 z-10">
       <NavBar />
       <div>
-        <div className="absolute z-20 flex flex-col items-center justify-center w-full xl:w-fit h-full top-0 left-0 xl:left-24">
+        {/* <div className="absolute z-20 flex flex-col items-center justify-center w-full xl:w-fit h-full top-0 left-0 xl:left-24">
           <div className="flex flex-col xl:flex-row gap-20">
             <div className="flex flex-col gap-6 text-center xl:text-left">
               <div className="flex flex-col gap-1">
@@ -45,7 +46,7 @@ const HeroSection = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="w-full h-full top-0 right-0 -z-10">
           <Slider />
         </div>
